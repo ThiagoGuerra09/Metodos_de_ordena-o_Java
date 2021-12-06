@@ -340,21 +340,7 @@ public class Filmes {
 
    // metodos de ordenação
     
-    void selecao(){
-        for (int i = 0; i < (n - 1); i++) {
-            int menor = i;
-            for (int j = (i + 1); j < n; j++){
-               if (series[menor].getPais().compareTo(series[j].getPais()) > 0 ){
-                  menor = j;
-               }else if(series[menor].getPais().equals(series[j].getPais())){
-                   if(series[menor].getNome().compareTo(series[j].getNome()) > 0 ){
-                       menor = j;
-                   }
-               }
-            }
-            swap(menor, i);
-         }
-    }
+
 
     void insercao() {
 		for (int i = 1; i < n; i++) {
@@ -369,65 +355,10 @@ public class Filmes {
 	}
 }
    
-    public void Heapsortt() {
-        //Alterar o vetor ignorando a posicao zero
-        Series_Filmes[] tmp = new Series_Filmes[n+1];
-        for(int i = 0; i < n; i++){
-           tmp[i+1] = series[i];
-        }
-        series = tmp;
+
+     
   
-        //Contrucao do heap
-        for(int tamHeap = 2; tamHeap <= n; tamHeap++){
-           construir(tamHeap);
-        }
-  
-        //Ordenacao propriamente dita
-        int tamHeap = n;
-        while(tamHeap > 1){
-           swap(1, tamHeap--);
-           reconstruir(tamHeap);
-        }
-  
-        //Alterar o vetor para voltar a posicao zero
-        tmp = series;
-        series = new Series_Filmes[n];
-        for(int i = 0; i < n; i++){
-           series[i] = tmp[i+1];
-        }
-     }
-  
-  
-     public void construir(int tamHeap){
-        
-        for(int i = tamHeap; i > 1 && series[i].getFormato().compareTo(series[i/2].getFormato()) > 0; i /= 2){
-           swap(i, i/2);
-        }
-     }
-  
-  
-     public void reconstruir(int tamHeap){
-        int i = 1;
-        while(i <= (tamHeap/2)){
-           int filho = getMaiorFilho(i, tamHeap);
-           if(series[i].getFormato().compareTo(series[filho].getFormato()) < 0){
-              swap(i, filho);
-              i = filho;
-           }else{
-              i = tamHeap;
-           }
-        }
-     }
-  
-     public int getMaiorFilho(int i, int tamHeap){
-        int filho;
-        if (2*i == tamHeap || series[2*i].getFormato().compareTo(series[2*i+1].getFormato()) > 0){
-           filho = 2*i;
-        } else {
-           filho = 2*i + 1;
-        }
-        return filho;
-     }
+
   
 
     public static void main(String[] args) throws Exception {
