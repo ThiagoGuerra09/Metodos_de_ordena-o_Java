@@ -5,3 +5,6 @@ Diversos meios de ordenar uma lista.
 
 O código lê os htmls propostos no arquivos "series", retira atributos dos htmls(como por exemplo: nome, idioma, numero de episodios e diversos atributos), após isso,
 o atributo desejado é especificado, e o código ordena a lista pelo atributo especificado utilizando os metodos acima de ordenação.
+
+Atenção: na parte "String url" dentro da main, é o endereço de onde eu deixei a minha pasta series, você deve colocar o endereço de onde você deixou sua pasta series
+no seu local.
