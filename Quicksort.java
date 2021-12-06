@@ -363,7 +363,7 @@ public class Filmes {
           if (esq < j)  quicksort(esq, j);
           if (i < dir)  quicksort(i, dir);
       }
-
+ 
     public static void main(String[] args) throws Exception {
         MyIO.setCharset("UTF-8");
         String[] entrada = new String[1000];
