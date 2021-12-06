@@ -380,7 +380,7 @@ public class Filmes {
     Series_Filmes sentinela = new Series_Filmes();
     sentinela.setEpisodios(0x7FFFFFFF);
     a1[i] = a2[j] = sentinela;
-
+ 
     //Intercalacao propriamente dita
     for(i = j = 0, k = esq; k <= dir; k++){
        series[k] = (a1[i].getEpisodios() <= a2[j].getEpisodios() || (a1[i].getEpisodios() == a2[j].getEpisodios() && a1[i].getNome().compareTo( a2[j].getNome()) <= 0)) ? a1[i++] : a2[j++];
