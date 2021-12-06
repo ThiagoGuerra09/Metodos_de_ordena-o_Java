@@ -194,7 +194,7 @@ void selecao() {
       }
       swap(menor, i);
    }
-}
+} 
 
 void Inserirserie(Serie x){
 series[n]=x;
