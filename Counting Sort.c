@@ -288,7 +288,7 @@ int main() {
     Serie serie;
     size_t tam_prefixo = strlen(PREFIXO);
     char line[MAX_LINE_SIZE];
-
+ 
     strcpy(line, PREFIXO);
     readline(line + tam_prefixo, MAX_LINE_SIZE);
 
