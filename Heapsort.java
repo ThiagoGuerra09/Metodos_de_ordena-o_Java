@@ -340,34 +340,6 @@ public class Filmes {
 
    // metodos de ordenação
     
-    void selecao(){
-        for (int i = 0; i < (n - 1); i++) {
-            int menor = i;
-            for (int j = (i + 1); j < n; j++){
-               if (series[menor].getPais().compareTo(series[j].getPais()) > 0 ){
-                  menor = j;
-               }else if(series[menor].getPais().equals(series[j].getPais())){
-                   if(series[menor].getNome().compareTo(series[j].getNome()) > 0 ){
-                       menor = j;
-                   }
-               }
-            }
-            swap(menor, i);
-         }
-    }
-
-    void insercao() {
-		for (int i = 1; i < n; i++) {
-			Series_Filmes tmp = series[i];
-         int j = i - 1;
-
-         while ((j >= 0) && ((series[j].getIdioma().compareTo(tmp.getIdioma()) > 0) ||( (series[j].getIdioma().compareTo(tmp.getIdioma()) == 0) && (series[j].getNome().compareTo(tmp.getNome()) > 0)))){
-            series[j + 1] = series[j];
-            j--;                
-         }
-         series[j + 1] = tmp;
-	}
-}
    
     public void Heapsortt() {
         //Alterar o vetor ignorando a posicao zero
