@@ -29,7 +29,7 @@ class Series_Filmes {
             int temporadas, int episodios) {
         this.nome = nome;
         this.idioma = idioma;
-        this.duracao = duracao;
+        this.duracao = duracao; 
         this.formato = formato;
         this.pais = pais;
         this.emissora = emissora;
